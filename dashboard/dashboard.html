@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalis - Painel de Monitoramento</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../img/vitalis-simbolo-azul-escuro.png" alt="Símbolo geométrico em azul escuro representando a marca Vitalis" class="simbolo">
+                <img src="../img/vitalis-logo-azul-escuro.png" alt="Logotipo textual Vitalis em azul escuro" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <span class="user-greeting">Olá, <strong id="nome-usuario-logado">Cuidador</strong></span>
+                <a href="../index.html" class="btn-logout" id="btn-sair">Sair da Conta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <div class="dashboard-header">
+            <h1>Painel de Acompanhamento Postural</h1>
+            <p>Gerenciamento em tempo real do paciente monitorado pelo dispositivo Vitalis.</p>
+        </div>
+
+        
+        <div class="dashboard-grid">
+            
+            <div class="dash-card">
+                <div class="dash-card-header">
+                    <span class="card-icon-bg"></span>
+                    <h3>Posição Atual</h3>
+                </div>
+                <div class="dash-card-body">
+                    <span class="dash-highlight">Decúbito Lateral Direito</span>
+                    <p class="dash-subtext">Ângulo de inclinação: 30°</p>
+                </div>
+            </div>
+
+            
+            <div class="dash-card">
+                <div class="dash-card-header">
+                    <span class="card-icon-bg"></span>
+                    <h3>Tempo Decorrido</h3>
+                </div>
+                <div class="dash-card-body">
+                    <span class="dash-highlight alerta-tempo">1h 45min</span>
+                    <p class="dash-subtext">Limite recomendado: 2h 00min</p>
+                </div>
+            </div>
+
+            
+            <div class="dash-card">
+                <div class="dash-card-header">
+                    <span class="card-icon-bg"></span>
+                    <h3>Status do Dispositivo</h3>
+                </div>
+                <div class="dash-card-body">
+                    <div class="status-online">
+                        <span class="dot-green"></span> Conectado via IoT
+                    </div>
+                    <p class="dash-subtext">Bateria do bracelete: 85%</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="dash-section">
+            <h2>Histórico Recente de Mudanças Posturais</h2>
+            <div class="table-container">
+                <table class="dash-table">
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Posição</th>
+                            <th>Duração</th>
+                            <th>Status da Troca</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12:30</td>
+                            <td>Decúbito Dorsal (Costas)</td>
+                            <td>2h 00min</td>
+                            <td><span class="badge badge-sucesso">Concluída</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:30</td>
+                            <td>Decúbito Lateral Esquerdo</td>
+                            <td>1h 55min</td>
+                            <td><span class="badge badge-sucesso">Concluída</span></td>
+                        </tr>
+                        <tr>
+                            <td>08:30</td>
+                            <td>Decúbito Dorsal (Costas)</td>
+                            <td>2h 00min</td>
+                            <td><span class="badge badge-alerta">Aviso Emitido</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="../auth/auth.js"></script>
+</body>
+</html>
