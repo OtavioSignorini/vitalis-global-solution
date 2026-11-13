@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalis - Monitoramento Inteligente para Idosos</title>
+    <title>Vitalis - Monitoramento Postural e Fisiologico</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-   
     <header class="header">
         <div class="header-container">
             <div class="logo-container">
-                <img src="img/vitalis-simbolo-azul-escuro.png" alt="Símbolo geométrico em azul escuro representando a marca Vitalis" class="simbolo">
-                <img src="img/vitalis-logo-azul-escuro.png" alt="Logotipo textual Vitalis em azul escuro" class="logo">
+                <img src="img/vitalis-simbolo-azul-escuro.png" alt="Simbolo Vitalis" class="simbolo">
+                <img src="img/vitalis-logo-azul-escuro.png" alt="Logotipo Vitalis" class="logo">
             </div>
-            <nav class="nav-menu">
-                <a href="#inicio">Início</a>
-                <a href="#problema">Problema</a>
-                <a href="#tecnologia">Tecnologia</a>
-                <a href="#objetivos">Objetivos</a>
-                <a href="#publico-alvo">Público-alvo</a>
-                <a href="#beneficios">Benefícios</a>
-                <a href="login/login.html" class="btn-entrar">Entrar / Cadastrar</a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#sobre">Sobre</a>
+                <a href="#problema">Problema e LPP</a>
+                <a href="#tecnologia">Hardware e Sensores</a>
+                <a href="#modelo-matematico">Modelo de Risco</a>
+                <a href="login/login.html" class="btn-nav-primary">Entrar / Cadastrar</a>
             </nav>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <main>
-        
-        <section id="inicio" class="hero-section">
+        <section class="hero-section" id="sobre">
             <div class="hero-container">
-                <div class="hero-content">
-                    <span class="tag-destaque">Prevenção & Saúde Senior</span>
-                    <h1 class="titulo-principal">Cuidado proativo que protege quem você ama</h1>
-                    <p class="hero-descricao">
-                        O dispositivo vestível inteligente da <strong>Vitalis</strong> monitora a postura e o tempo de permanência no leito em tempo real, prevenindo lesões por pressão com alertas preditivos eficientes.
-                    </p>
+                <div class="hero-text">
+                    <span class="badge-tag">Prevencao e Saude Senior</span>
+                    <h1>Cuidado proativo que protege quem voce ama</h1>
+                    <p>O dispositivo vestivel inteligente da Vitalis monitora a postura, o tempo de permanencia no leito, a frequencia cardiaca, a frequencia respiratoria e a temperatura da pele em tempo real, alertando cuidadores e equipes de enfermagem.</p>
                     <div class="hero-buttons">
-                        <a href="#beneficios" class="btn-primary">Ver Impacto</a>
-                        <a href="#tecnologia" class="btn-secondary">Conhecer Tecnologia</a>
+                        <a href="login/cadastro.html" class="btn-primary">Conhecer a Solucao</a>
+                        <a href="#problema" class="btn-secondary">Saiba Mais</a>
                     </div>
                 </div>
+
                 <div class="hero-card-preview">
-                    <div class="status-badge">
-                        <span class="dot-green"></span> Monitoramento Ativo
-                    </div>
-                    <div class="metric-group">
-                        <div class="metric-item">
-                            <span class="metric-label">Posição Atual do Paciente</span>
-                            <span class="metric-value">Decúbito Lateral Direito</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-label">Tempo na Posição Atual</span>
-                            <span class="metric-value alerta">1h 45min (Alerta de Troca Próximo)</span>
-                        </div>
-                        <div class="metric-grid">
-                            <div class="sub-metric">
-                                <span class="metric-label">Orientação</span>
-                                <span class="metric-value">Inclinado 30°</span>
+                    <div class="live-card-wrapper">
+                        <div class="live-card">
+                            <div class="live-header">
+                                <span class="status-dot"></span> Monitoramento Ativo IoT
                             </div>
-                            <div class="sub-metric">
-                                <span class="metric-label">Status do Alarme</span>
-                                <span class="metric-value">Em espera</span>
+                            <div class="live-body">
+                                <span class="live-label">Posicao Atual</span>
+                                <span class="live-value">Decubito Lateral Direito</span>
+                                
+                                <span class="live-label tempo-margin">Tempo na Posicao</span>
+                                <span class="live-alert">1h 45min (Alerta Proximo)</span>
+
+                                <div class="live-metrics-grid">
+                                    <div class="metric-box">
+                                        <span class="metric-title">Frequencia</span>
+                                        <span class="metric-val">72 BPM</span>
+                                    </div>
+                                    <div class="metric-box">
+                                        <span class="metric-title">Temperatura</span>
+                                        <span class="metric-val">36.5 C</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,129 +75,147 @@
             </div>
         </section>
 
-        
-        <section id="problema" class="secao-container">
-            <div class="grid-2-col">
-                <div class="info-card">
-                    <h2>Problema</h2>
-                    <p>Idosos acamados ou com mobilidade reduzida enfrentam sério risco de desenvolver lesões por pressão (escaras). A permanência prolongada na mesma posição bloqueia a circulação sanguínea, originando feridas graves de difícil cicatrização.</p>
-                </div>
-                
-                <div id="objetivos" class="info-card">
-                    <h2>Objetivos</h2>
-                    <p>Automatizar o rastreamento do tempo de permanência postural e emitir avisos preditivos. Nosso objetivo principal é eliminar o fator humano do esquecimento e garantir integridade cutânea absoluta ao paciente acamado.</p>
-                </div>
-            </div>
-        </section>
+        <section class="secao-padrao" id="problema">
+            <div class="container">
+                <h2>O Desafio das Lesoes por Pressao (LPP)</h2>
+                <p class="section-desc">Dano local na pele e nos tecidos moles provocado por pressao mantida associada a friccao e cisalhamento, afetando pacientes acamados em residencias e hospitais.</p>
 
-        
-        <section id="tecnologia" class="secao-destaque-alt">
-            <div class="content-wrapper">
-                <div class="section-title-center">
-                    <h2>Tecnologia Inteligente</h2>
-                    <p>Sensores vestíveis avançados para controle e mapeamento postural contínuo.</p>
-                </div>
-                <div class="cards-grid-3">
-                    <div class="card-feature">
-                        <div class="card-icon"></div>
-                        <h3>Acelerômetro e Giroscópio</h3>
-                        <p>Sensores inerciais de alta precisão incorporados ao bracelete ou cinto para identificar com exatidão o ângulo e a posição do corpo.</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Cuidador Domestico</h3>
+                        <p>Depende de alarmes no celular e anotacoes manuais em papel, metodos passiveis de esquecimento ou silenciamento na rotina corrida do dia a dia.</p>
                     </div>
-                    <div class="card-feature">
-                        <div class="card-icon"></div>
-                        <h3>Conectividade IoT & Alertas</h3>
-                        <p>Transmissão de dados via Wi-Fi/Bluetooth que dispara notificações automáticas no smartphone do cuidador quando o ciclo postural deve ser alterado.</p>
+                    <div class="card">
+                        <h3>Equipe de Enfermagem</h3>
+                        <p>Conta com quadros fisicos de horarios ao lado do leito hospitalar. A alta demanda de trabalho frequentemente resulta em lapsos no reposicionamento.</p>
                     </div>
-                    <div class="card-feature">
-                        <div class="card-icon"></div>
-                        <h3>Cronometragem Preditiva</h3>
-                        <p>Sistema inteligente que calcula o tempo limite seguro de decúbito com base nas características individuais e no histórico de saúde do idoso.</p>
+                    <div class="card">
+                        <h3>Publico-Alvo</h3>
+                        <p>Pacientes acamados de longa duracao, idosos com mobilidade reduzida, cuidadores familiares e profissionais de instituicoes de saude.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        
-        <section class="secao-slideshow">
+        <section class="secao-padrao alt-bg" id="tecnologia">
+            <div class="container">
+                <h2>Arquitetura de Hardware e Sensores</h2>
+                <p class="section-desc">Componentes integrados no bracelete inteligente para capturar dados precisos com conforto e autonomia.</p>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Processamento ESP32</h3>
+                        <p>Microcontrolador responsavel pelo processamento das informacoes recebidas pelos sensores e execucao da logica de monitoramento local.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Acelerometro MPU6050</h3>
+                        <p>Combina acelerometro e giroscopio para identificar inclinações e movimentações do bracelete, estimando a posicao corporal exata.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sinais Vitais e Temperatura</h3>
+                        <p>Sensor optico MAX30102 para frequencia cardiaca e SpO2, aliado ao sensor TMP117 de alta precisao para acompanhar a temperatura da pele.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Alertas Sonoros e Visuais</h3>
+                        <p>Buzzer e LED integrados para emissao de sinais de alerta locais imediatos, funcionando mesmo sem conexao com a internet.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Alimentacao e Conforto</h3>
+                        <p>Bateria Li-Po recarregable de 3.7V 1000mAh garantindo portabilidade, acoplada a uma cinta de poliester com elastano e case em impressao 3D.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Condicoes Ambientais</h3>
+                        <p>Sensor DHT22 opcional para monitorar temperatura e umidade ambiente do quarto, assegurando o conforto termico do paciente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-padrao" id="modelo-matematico">
+            <div class="container">
+                <h2>Modelo Matematico de Risco R(t)</h2>
+                <p class="section-desc">Funcao afim (polinomial de grau 1) desenvolvida para calcular de forma objetiva o risco de formacao de lesoes com base no tempo.</p>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Definicao das Variaveis</h3>
+                        <p>t representa o tempo na mesma posicao em horas. T e o tempo-limite determinado pelo medico de acordo com a condicao clinica do paciente.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Funcao de Risco</h3>
+                        <p>R(t) = 100 * t / T para o intervalo de 0 ate T, e R(t) = 100 quando o tempo ultrapassa o limite T. O crescimento e linear e proporcional.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Alerta Preventivo Antecipado</h3>
+                        <p>O sistema dispara alertas automaticos ao atingir 80% do limite T (por exemplo, com 1.6h quando T = 2h), permitindo a troca antes do pico maximo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="secao-slideshow" id="slideshow-secao">
             <div class="slideshow-container">
-                <h2>Conheça o Projeto Vitalis</h2>
-                <p>Acompanhe a tecnologia de monitoramento postural passo a passo.</p>
+                <h2>Apresentacao do Projeto</h2>
+                <p>Prototipagem fisica, componentes internos e arquitetura do dispositivo wearable.</p>
                 
                 <div class="slider">
-                    <div class="slide fade active">
-                        <img src="img/vitalis-simbolo-azul-escuro.png" alt="Símbolo geométrico oficial da Vitalis em azul escuro">
-                        <div class="slide-caption">1. Símbolo e Identidade Visual</div>
+                    <div class="slide fade">
+                        <img src="img/case.png" alt="Case e cinta do dispositivo Vitalis">
+                        <div class="slide-caption">Case e Cinta do Wearable</div>
                     </div>
                     
                     <div class="slide fade">
-                        <img src="img/vitalis-logo-azul-escuro.png" alt="Logotipo textual completo da marca Vitalis">
-                        <div class="slide-caption">2. Logotipo do Projeto</div>
+                        <img src="img/projeto-desconstruido.jpeg" alt="Visao explosida dos componentes internos do dispositivo">
+                        <div class="slide-caption">Arquitetura Interna e Componentes</div>
                     </div>
 
                     <div class="slide fade">
-                        <img src="img/vitalis-simbolo-azul-escuro.png" alt="Dispositivo de monitoramento vestível e sensores posturais">
-                        <div class="slide-caption">3. Bracelete Inteligente em Operação</div>
+                        <img src="img/vitalis-pratica.png" alt="Vitalis na pratica">
+                        <div class="slide-caption">Vitalis posicionado corretamente</div>
                     </div>
 
-                   
                     <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
                     <a class="next" onclick="mudarSlide(1)">&#10095;</a>
                 </div>
             </div>
         </section>
 
-       
-        <section id="publico-alvo" class="secao-container">
-            <div class="split-layout">
-                <div class="split-text">
-                    <h2>Público-alvo</h2>
-                    <p>A solução atende diretamente a uma ampla rede de cuidados à saúde sênior:</p>
-                    <ul class="lista-check">
-                        <li><strong>Idosos com mobilidade reduzida:</strong> Pacientes que necessitam de trocas posturais periódicas obrigatórias.</li>
-                        <li><strong>Cuidadores e Familiares:</strong> Pessoas que gerenciam o cuidado domiciliar e precisam de suporte ativo contra o esquecimento.</li>
-                        <li><strong>Instituições de Longa Permanência (ILPIs):</strong> Asilos e clínicas que monitoram múltiplos leitos simultaneamente com eficiência.</li>
+
+        <section class="secao-padrao alt-bg">
+            <div class="container action-container">
+                <div class="action-text">
+                    <h2>Impacto Operacional e Beneficios</h2>
+                    <p class="action-lead">A solucao centraliza todas as informacoes em um unico painel web intuitivo para cuidadores e enfermeiros.</p>
+                    
+                    <ul class="action-list">
+                        <li><strong>Notificacoes Inteligentes:</strong> Avisos multicanal visuais, sonoros e remotos sem dependencia exclusiva de memoria humana.</li>
+                        <li><strong>Individualizacao de Parametros:</strong> Ajuste flexivel do tempo T diretamente no aplicativo conforme a prescricao clinica.</li>
+                        <li><strong>Historico Confiable:</strong> Registro de movimentacoes passadas para auditoria e acompanhamento medico continuo.</li>
                     </ul>
                 </div>
-                <div class="split-box">
-                    <h3>Foco em Eficiência</h3>
-                    <p>Reduz a sobrecarga física e mental da equipe de cuidadores através de automação preditiva e alarmes inteligentes de mudança de decúbito.</p>
-                </div>
-            </div>
-        </section>
 
-      
-        <section id="beneficios" class="secao-destaque-alt">
-            <div class="content-wrapper">
-                <div class="split-layout">
-                    <div class="split-text">
-                        <h2>Benefícios</h2>
-                        <p>O projeto Vitalis transforma o padrão de atendimento geriátrico, oferecendo segurança máxima e tranquilidade ininterrupta para quem cuida e para quem é cuidado.</p>
-                        <p style="margin-top: 15px;">Prevenção altamente eficaz com redução drástica de custos operacionais e internações decorrentes de feridas crônicas por pressão.</p>
+                <div class="detalhes-box-destaque">
+                    <h3>Impacto da Solução</h3>
+                    <div class="stat-item">
+                        <span class="stat-num">90%</span>
+                        <span class="stat-desc">de redução no risco de desenvolvimento de lesões graves.</span>
                     </div>
-                    <div class="detalhes-box-destaque">
-                        <h3>Impacto da Solução</h3>
-                        <div class="stat-item">
-                            <span class="stat-num">90%</span>
-                            <span class="stat-desc">de redução no risco de desenvolvimento de lesões graves.</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">24/7</span>
-                            <span class="stat-desc">de acompanhamento contínuo e monitoramento postural preventivo.</span>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-desc">de acompanhamento contínuo e monitoramento preventivo.</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    
     <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Vitalis - Global Solution CitizenTech. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2026 Vitalis - Global Solution CitizenTech. Equipe: Daniel, Kayque, Luiz Henrique e Otavio.</p>
         </div>
     </footer>
 
-    
     <script src="js/main.js"></script>
 </body>
 </html>

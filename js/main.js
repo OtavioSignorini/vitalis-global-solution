@@ -7,7 +7,7 @@ function mudarSlide(n) {
 
 function mostrarSlides(n) {
     let slides = document.querySelectorAll(".slide");
-    if (slides.length === 0) return; 
+    if (slides.length === 0) return;
 
     if (n >= slides.length) {
         slideIndex = 0;
@@ -16,16 +16,13 @@ function mostrarSlides(n) {
         slideIndex = slides.length - 1;
     }
 
-    
     slides.forEach(slide => {
         slide.style.display = "none";
     });
 
-    
     slides[slideIndex].style.display = "block";
 }
 
-
 setInterval(() => {
     mudarSlide(1);
-}, 4000);
+}, 2300);
