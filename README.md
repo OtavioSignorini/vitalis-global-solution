@@ -1,3 +1,18 @@
+# PITCH - Vitalis
+
+https://youtu.be/hT-5QerGCsE
+
+
+# Integrantes - Vitalis
+
+- Otavio Campos Signorini - GitHub: OtavioSignorini
+
+- Daniel Teixeira da Silva - GitHub: danielznz
+
+- Kayque Mateus Marques de Paiva Barreto - GitHub: kayquemateusmarques
+
+- Luiz Henrique Selim Mendes - GitHub: selimnds
+
 # Vitalis - Sistema Web de Monitoramento e Acompanhamento Postural
 
 Projeto desenvolvido como parte da **Global Solution CitizenTech** da FIAP. O sistema consiste em uma aplicação web desenvolvida com tecnologias nativas, destinada ao acompanhamento de pacientes e suporte a cuidadores na prevenção de lesões por pressão (LPP).
