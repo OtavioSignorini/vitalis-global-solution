@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formCadastro = document.getElementById("form-cadastro");
     const formLogin = document.getElementById("form-login");
 
-    // LÓGICA DE CADASTRO
+    
     if (formCadastro) {
         formCadastro.addEventListener("submit", (e) => {
             e.preventDefault(); 
